@@ -5,12 +5,15 @@ url2 = "https://www.newegg.com/lacie-model-stfr5000800-5tb/p/2WA-0009-000F0?Item
 url3 = "https://www.ikea.com/us/en/p/uppland-sectional-4-seat-corner-blekinge-white-s49384110/"
 results = requests.get(url3)
 
+soup = BeautifulSoup(results.text, "html.parser")
+article_id_list = soup.find_all(string="Article Number")
 
-with open(results, 'r') as f:
-    contents =  f.read()
-    soup = BeautifulSoup(contents, "html.parser")
+# for f in range(len(article_id_list)):
+#     parents = article_id_list[f].find_parent('div').parent
 
 
-    for child in soup.descendants:
-        if child.name:
-            print(child.name)
+#     print(parents)
+parents = article_id_list[1].find_parent('div').parent
+
+print(parents)
+print(article_id_list)
