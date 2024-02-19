@@ -24,16 +24,107 @@ def product_main(soup):
         item_descr_append = ""
     item_description = item_description + item_descr_append
 
-def product_parts(soup):
-    
+#def product_parts(soup):
+
 # for f in range(len(article_id_list)):
 #     parents = article_id_list[f].find_parent('div').parent
 
 
 #     print(parents)
 # parents = article_id_list[1].find_parent('div').parent
+
 print(item_id)
 print(item_name_series)
 print(item_description)
 # print(parents)
 print(article_id_list)
+
+'''
+    json = {
+        products_category : {
+            furniture : {
+                product_data : {
+                    product_id : '994.319.82',
+                    product_series : 'LAGKAPTEN / ALEX',
+                    product_description : 'Desk, white, 55 1/8x23 5/8 "',
+                    packaging_data : {
+                        package_id : '404.608.15'
+                        package_series : 'LAGKAPTEN',
+                        package_description : 'Tabletop',
+                        package : {
+                            package_ord : 1,
+                            width : 24.0,
+                            height : 1.5,
+                            length : 55.5,
+                            weight : 18.625,
+                            count : 1
+                        }
+                    },
+                    {
+                        package_id : '004.735.46',
+                        package_series : 'ALEX',
+                        package_description : 'Drawer unit',
+                        package : {
+                            package_ord : 1,
+                            width : 23.5,
+                            height : 4.25,
+                            length : 32.0,
+                            weight : 61.6875,
+                            count : 2
+                        }
+                    },
+                    prod_url : 'https://www.ikea.com/us/en/p/lagkapten-alex-desk-white-s99431982/'
+                },
+                {
+                    product_id : '493.841.10',
+                    product_series : 'UPPLAND',
+                    product_description : 'Sectional, 4-seat corner, Blekinge white',
+                    packaging_data : {
+                        package_id : '904.727.07',
+                        package_series : 'UPPLAND',
+                        package_description : 'Frame for corner secional, 4-seat'
+                        package : {
+                            package_ord : 1,
+                            width : 36.5,
+                            height : 17.25,
+                            length : 61.0,
+                            weight : 122.6875,
+                            count : 1
+                        },
+                        {
+                            package_ord : 2,
+                            width : 36.5,
+                            height : 17.25,
+                            length : 61.0,
+                            weight : 110.25,
+                            count : 1
+                        },
+                        {
+                            package_ord : 3,
+                            width : 36.25,
+                            height : 25.5,
+                            length : 36.5,
+                            weight : 73.0625,
+                            count : 1
+                        }
+                    },
+                    {
+                        package_id : '804.876.29',
+                        package_series : 'UPPLAND',
+                        package_description : 'Cover for sectional, 4-seat',
+                        package : {
+                            package_ord : 1,
+                            width : 14.75,
+                            height : 5.5,
+                            length : 29.75,
+                            weight : 24.5,
+                            count : 1
+                        }
+                    }
+                    product_url : 'https://www.ikea.com/us/en/p/uppland-sectional-4-seat-corner-blekinge-white-s49384110/'
+                }
+
+            }
+        }
+    }
+'''
