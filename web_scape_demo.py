@@ -14,20 +14,20 @@ def product_soup(prod_url):
     # article_id_list = soup.find_all(string="Article Number")
 
 def product_main(soup):
-    item_id = soup.find("span", class_="pip-product-identifier__value").string
-    item_name_series = soup.find("div", class_="pip-header-section__container-text").find("span").string
-    item_description_parts = soup.find("span", class_="pip-header-section__description")
-    item_description = item_description_parts.find("span").string
+    product_id = soup.find("span", class_="pip-product-identifier__value").string
+    product_series = soup.find("div", class_="pip-header-section__container-text").find("span").string
+    product_description_parts = soup.find("span", class_="pip-header-section__description")
+    product_description = product_description_parts.find("span").string
     try:
-        item_descr_append = " " + item_description_parts.find(class_="pip-link-button pip-header-section__description-measurement").string
+        product_descr_append = " " + product_description_parts.find(class_="pip-link-button pip-header-section__description-measurement").string
     except:
-        item_descr_append = ""
-    item_description = item_description + item_descr_append
+        product_descr_append = ""
+    product_description = product_description + product_descr_append
 
-#def product_parts(soup):
+def product_parts(soup):
 
-# for f in range(len(article_id_list)):
-#     parents = article_id_list[f].find_parent('div').parent
+    for f in range(len(article_id_list)):
+        parents = article_id_list[f].find_parent('div').parent
 
 
 #     print(parents)
