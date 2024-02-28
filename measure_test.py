@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import unicodedata as uni
+import json
 
 test = 'Width : 36 ½ "'
 test2 = 'Weight :  15 lb 4 oz'
@@ -115,8 +116,12 @@ def unit_conversion(measurement_list):
     return list_output
 
 test_url = 'https://www.ikea.com/us/en/p/uppland-sectional-4-seat-corner-blekinge-white-s49384110/'
-product_data = product_dataset(test_url)
-print(product_data)
+test_url_bed = 'https://www.ikea.com/us/en/p/hemnes-bed-frame-with-2-storage-boxes-dark-gray-stained-loenset-s69275214/#content'
+product_data = product_dataset(test_url_bed)
+
+pretty_json = json.dumps(product_data, indent=4)
+
+print(pretty_json)
 
 '''
 -- above python script creates product_data dictionary --
